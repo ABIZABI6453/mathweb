@@ -1,14 +1,12 @@
 let currentAnswer = 0;
 
 function generateExercise() {
-    let coefficient = Math.floor(Math.random() * 10) + 1;
-    let constant = Math.floor(Math.random() * 20) + 1;
-    let xValue = Math.floor(Math.random() * 10) + 1;
-    currentAnswer = xValue;
-    let equationSide = coefficient * xValue;
+    let num1 = Math.floor(Math.random() * 100);
+    let num2 = Math.floor(Math.random() * 100);
+    currentAnswer = num1 + num2;
 
-    document.getElementById('equation').innerText = `${coefficient}x`;
-    document.getElementById('constant').innerText = equationSide;
+    document.getElementById('num1').innerText = num1;
+    document.getElementById('num2').innerText = num2;
     document.getElementById('userAnswer').value = '';
     document.getElementById('result').innerText = '';
 }
@@ -24,6 +22,3 @@ function checkAnswer() {
 
 // Generate the first exercise when the page loads
 window.onload = generateExercise;
-
-
-currentAnswer = admingetanswer
